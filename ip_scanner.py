@@ -128,7 +128,7 @@ def find_my_address_and_dg():
     :return: dictionary of the three addresses {IP: __, dg: __, sm: __}
     """
     cmd_output = os.popen(f'ipconfig').read()
-    cmd_output_regex = re.compile(r'\d+.\d+.\d+.\d+')
+    cmd_output_regex = re.compile(r'\d+\.\d+\.\d+\.\d+')
     my_addresses = cmd_output_regex.findall(cmd_output)
 
     return {
